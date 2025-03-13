@@ -1,3 +1,26 @@
+
+# Instalar as dependências do projeto
+composer install
+
+# Copiar o arquivo de configuração
+cp .env.example .env
+
+# Gerar a chave de aplicação
+php artisan key:generate
+
+# Criar o banco de dados SQLite
+touch database/database.sqlite
+
+# Executar as migrações do banco de dados
+php artisan migrate
+
+# Iniciar o servidor de desenvolvimento
+php artisan serve
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
