@@ -8,14 +8,18 @@ function App() {
         <Button
           variant="outline"
           borderRadius="rounded"
-          width="full"
+          size="md"
+          width="auto"
+          onClick={() => {
+            console.log("clicked")
+          }}
         >
           Click me
         </Button>
         <Button
-        variant="default"
+        variant="primary"
         width="full"
-        size="large"
+        size="lg"
         borderRadius="default"
         >
         Click me

@@ -1,61 +1,69 @@
-import React from 'react';
+import { ButtonHTMLAttributes, ElementType } from 'react'
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'outline';
-  size?: 'default' | 'large';
-  width?: 'default' | 'full';
-  children: React.ReactNode;
-  borderRadius?: 'default' | 'rounded';
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'outline'
+  size?: 'sm' | 'md' | 'lg'
+  width?: 'auto' | 'full'
+  className?: string
+  as?: ElementType
+  to?: string 
+  onClick?: () => void
+  borderRadius?: 'default' | 'rounded'
 }
 
-const Button: React.FC<ButtonProps> = ({
-  variant = 'default',
-  size = 'default',
-  width = 'default',
+export const Button = ({
+  variant = 'primary',
+  size = 'md',
+  width = 'auto',
   borderRadius = 'default',
+  className = '',
+  as: Component = 'button',
   children,
-  className,
   ...props
-}) => {
-  const baseStyles = 'font-poppins transition-all duration-300 cursor-pointer';
-  
-  const variantStyles = {
-    default: 'bg-[#FFC059] text-white hover:bg-[#e5ac4f]',
-    outline: 'bg-transparent text-[#FFC059] border-2 border-[#FFC059] hover:bg-[#FFC059] hover:text-white'
-  };
-
+}: ButtonProps) => {
   const sizeStyles = {
-    default: 'px-5 py-2.5 text-[18px]',
-    large: 'px-8 py-4 text-[23px]'
-  };
+    sm: 'px-3 py-2 text-[14px]',
+    md: 'px-5 py-2.5 text-[18px]',
+    lg: 'px-8 py-4 text-[23px]'
+  }
 
   const widthStyles = {
-    default: 'w-auto min-w-[120px]',
+    auto: 'w-auto min-w-[120px]',
     full: 'w-full'
-  };
+  }
 
   const borderRadiusStyles = {
     default: 'rounded-[8px]',
     rounded: 'rounded-[50px]'
-  };
+  }
 
-  const combinedClassName = `
-    ${baseStyles}
-    ${variantStyles[variant]}
-    ${sizeStyles[size]}
-    ${widthStyles[width]}
-    ${borderRadiusStyles[borderRadius]}
-    ${className || ''}
-  `.trim();
+  const variantStyles = {
+    primary: 'bg-[#FFC059] text-white hover:bg-[#e5ac4f]',
+    outline: 'bg-transparent text-[#FFC059] border-2 border-[#FFC059] hover:bg-[#FFC059] hover:text-white'
+  }
 
   return (
-    <button
-      className={combinedClassName}
+    <Component
+      className={`
+        ${sizeStyles[size]}
+        ${widthStyles[width]}
+        ${variantStyles[variant]}
+        ${borderRadiusStyles[borderRadius]}
+        font-poppins
+        transition-all
+        duration-300 
+        flex
+        items-center
+        justify-center
+        text-center
+        ${className}
+        cursor-pointer
+      `}
       {...props}
     >
       {children}
-    </button>
-  );
-};
+    </Component>
+  )
+}
 
 export default Button;
