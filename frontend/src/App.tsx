@@ -1,31 +1,17 @@
-import Button from "./components/Button"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Teste } from './pages/Teste'
+
 
 function App() {
-
   return (
-    <>
-      <div className="w-[50%] flex">
-        <Button
-          variant="outline"
-          borderRadius="rounded"
-          size="md"
-          width="auto"
-          onClick={() => {
-            console.log("clicked")
-          }}
-        >
-          Click me
-        </Button>
-        <Button
-        variant="primary"
-        width="full"
-        size="lg"
-        borderRadius="default"
-        >
-        Click me
-        </Button> 
-      </div>
-    </>
+    <BrowserRouter>
+      {/* importar header, menu, footer aqui */}
+          <Routes>
+            <Route path="/" element={<Teste />} />
+          </Routes>
+      
+      
+    </BrowserRouter>
   )
 }
 
