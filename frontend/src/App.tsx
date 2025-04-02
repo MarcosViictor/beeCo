@@ -1,9 +1,26 @@
+import Button from "./components/Button"
 
 function App() {
 
   return (
     <>
-      <h1 className="text-4xl">Hello</h1>
+      <div className="w-[50%] flex">
+        <Button
+          variant="outline"
+          borderRadius="rounded"
+          width="full"
+        >
+          Click me
+        </Button>
+        <Button
+        variant="default"
+        width="full"
+        size="large"
+        borderRadius="default"
+        >
+        Click me
+        </Button> 
+      </div>
     </>
   )
 }

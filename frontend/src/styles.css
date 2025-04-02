@@ -20,3 +20,34 @@
   --border-radius-50px: 50px;
 }
 
+.btn {
+  background-color: var(--color-light-yellow);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-50px);
+  padding: 10px 20px;
+  font-size: var(--font-size-18px);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: darken(var(--color-light-yellow), 10%);
+}
+
+.btn-large {
+  padding: 15px 30px;
+  font-size: var(--font-size-23px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-light-yellow);
+  border: 2px solid var(--color-light-yellow);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-light-yellow);
+  color: var(--color-white);
+}
+
