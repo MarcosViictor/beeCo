@@ -11,14 +11,9 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Teste />} />
+        <Route path="/register-option" element={<RegisterOptionUser />} />
       </Routes>
       <Footer />
-          <Routes>
-            <Route path="/" element={<Teste />} />
-            <Route path="/register-option" element={<RegisterOptionUser />} />
-          </Routes>
-          
-      
     </BrowserRouter>
   )
 }
