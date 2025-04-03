@@ -20,6 +20,15 @@
   --border-radius-50px: 50px;
 }
 
+/* Configuração global da fonte Poppins */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 .btn {
   background-color: var(--color-light-yellow);
   color: var(--color-white);
