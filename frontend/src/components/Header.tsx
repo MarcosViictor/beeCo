@@ -19,23 +19,31 @@ export const Header = () => {
             </li>
             <li>
               <a href='#' className='hover:text-light-yellow'>
-                serviços
+                sobre nós
               </a>
             </li>
             <li>
               <a href='#' className='hover:text-light-yellow'>
-                sobre nós
+                recursos
               </a>
             </li>
+            <li>
+              <a href='#' className='hover:text-light-yellow'>
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href='#' className='hover:text-light-yellow'>
+                Contato 
+              </a>
+            </li> 
           </ul>
 
           <div className='flex items-center gap-12'>
             <span className='text-light-yellow'>|</span>
 
-            <Link to="/register-option">
-              <a
-                className='text-light-yellow font-medium uppercase hover:text-hover-yellow underline'
-              >
+            <Link to='/register-option'>
+              <a className='text-light-yellow font-medium uppercase hover:text-hover-yellow underline'>
                 criar conta
               </a>
             </Link>
@@ -46,7 +54,7 @@ export const Header = () => {
               borderRadius='rounded'
               className='uppercase font-medium tracking-wide py-3 !text-[15px] !w-[200px] '
               as={Link}
-              to="/login"
+              to='/login'
             >
               entrar
             </Button>
