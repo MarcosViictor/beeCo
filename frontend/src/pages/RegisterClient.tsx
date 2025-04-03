@@ -1,24 +1,22 @@
-import { Link } from "react-router-dom"
-
 import { Button } from "@/components/Button"
 import { Input } from "@/components/Input"
 
+import { Link } from "react-router-dom"
+
 import googleIcon from "@/assets/google.svg"
 
-export const Login = () => {
-  return (
+    export const RegisterClient = () => {
+    return (
         <div className="flex flex-col justify-center items-center h-screen ">
-            <div className="flex gap-30 justify-center items-center w-[800px]  ">
+            <div className="flex gap-30 justify-center items-center w-[800px] ">
                 <div className="flex flex-col gap-4 w-[400px]">
                     <h1 className="font-[400] text-[3.7rem] text-dark-gray leading-[2.5rem]">
                         <span className="font-bold">Bee</span>Co
                     </h1>
-                    <p className="text-gray-500 text-[1.2rem] leading-[1.5rem] flex flex-col">
-                        Bem vindo,
-                        <span>Faça login com a <span className="font-bold">Bee</span>Co!</span>
+                    <p className="text-gray-500 text-[1.2rem] leading-[1.5rem]">
+                       Faça parte da <span className="font-bold">Bee</span>Co como contratante!
                     </p>
                 </div>
-
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-4">
                         <div className="flex justify-center items-center gap-2">
@@ -32,13 +30,15 @@ export const Login = () => {
                                 Entrar com Google
                             </Button>
                         </div>
-                        <div className="flex justify-center items-center gap-2 w-full my-2">
+                        <div className="flex justify-center items-center gap-2 w-full ">
                             <hr className="border-gray-300 w-[130px]" />
                             <span className="text-gray-500 text-[.8rem] text-center px-2">Ou E-mail</span>
                             <hr className="border-gray-300 w-[130px]" />
                         </div>
+                        <Input label="Nome" type="text" placeholder="Digite seu nome"/>
                         <Input label="Email" type="text" placeholder="Digite seu email"/>
                         <Input label="Senha" type="password" placeholder="Digite sua senha" />
+                        <Input label="Confirmar Senha" type="password" placeholder="Confirme sua senha" />
                         <div className="flex justify-between items-center mt-6">
                             <Button 
                                 variant="primary" 
@@ -46,7 +46,7 @@ export const Login = () => {
                                 width="full" 
                                 className="uppercase"
                             >
-                                entrar
+                                continuar
                             </Button>
                         </div>
                     
@@ -62,7 +62,8 @@ export const Login = () => {
                             </Link>
                     </p>
                 </div>
+                
             </div>
         </div>
-  )
+    )
 }
