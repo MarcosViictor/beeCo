@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import Logo from '../assets/logo.svg'
-import Button from './Button' // Importando o botão
+import Logo from '@/assets/logo.svg'
+import { Button } from '@/components/Button' // Importando o botão
 
 export const Header = () => {
   return (
