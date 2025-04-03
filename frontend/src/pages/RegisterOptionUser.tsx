@@ -10,10 +10,23 @@ export const RegisterOptionUser = () => {
                     <p className="uppercase text-sm text-gray-500 font-light">Cadastre-se grátis</p>
                 </div>
                 <div className="flex flex-col gap-4">
-                    <Button variant="primary" size="md" width="full" className="text-[]">
+                    <Button 
+                        variant="primary" 
+                        size="md" 
+                        width="full" 
+                        className="text-[]"
+                        as={Link}
+                        to="/register-professional"
+                    >
                         <p className="uppercase">Profissional</p>
                     </Button>
-                    <Button variant="outline" size="md" width="full">
+                    <Button 
+                        variant="outline" 
+                        size="md" 
+                        width="full"
+                        as={Link}
+                        to="/register-client"
+                    >
                         <p className="uppercase">cliente</p>
                     </Button>
                     <p className="text-[0.7rem] text-gray-500 underline">Ao se inscrever no <span className="font-bold">Bee</span>Co, você concorda com nossa Política de Privacidade e Termos de Serviço</p>

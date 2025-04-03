@@ -1,9 +1,10 @@
 import { Button } from "@/components/Button"
 import { Footer } from "@/components/Footer"
-
+import { Header } from "@/components/Header"
 export const Teste = () => {
   return (
     <div>
+      <Header />  
       <div className="w-[50%] flex">
         <Button
           variant="outline"

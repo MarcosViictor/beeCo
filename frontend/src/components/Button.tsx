@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, ElementType } from 'react'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'outline'
+  variant?: 'primary' | 'outline' | 'softYellow' 
   size?: 'sm' | 'md' | 'lg'
   width?: 'auto' | 'full'
   className?: string
@@ -9,6 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   to?: string 
   onClick?: () => void
   borderRadius?: 'default' | 'rounded'
+  icon?: React.ReactNode
 }
 
 export const Button = ({
@@ -19,6 +20,7 @@ export const Button = ({
   className = '',
   as: Component = 'button',
   children,
+  icon,
   ...props
 }: ButtonProps) => {
   const sizeStyles = {
@@ -38,8 +40,9 @@ export const Button = ({
   }
 
   const variantStyles = {
-    primary: 'bg-[#FFC059] text-white hover:bg-[#e5ac4f]',
-    outline: 'bg-transparent text-[#FFC059] border-2 border-[#FFC059] hover:bg-[#FFC059] hover:text-white'
+    primary: 'bg-light-yellow text-white hover:bg-hover-yellow',
+    outline: 'bg-transparent text-light-yellow border-2 border-light-yellow hover:bg-light-yellow hover:text-white',
+    softYellow: 'bg-soft-yellow text-gray-500 font-light hover:bg-soft-yellow'
   }
 
   return (
@@ -58,9 +61,11 @@ export const Button = ({
         text-center
         ${className}
         cursor-pointer
+        gap-3
       `}
       {...props}
     >
+      {icon && <span className="flex items-center">{icon}</span>}
       {children}
     </Component>
   )

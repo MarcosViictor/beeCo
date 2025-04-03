@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Logo from '../assets/logo.svg'
 import Button from './Button' // Importando o botão
 
@@ -31,18 +32,21 @@ export const Header = () => {
           <div className='flex items-center gap-12'>
             <span className='text-light-yellow'>|</span>
 
-            <a
-              href='#'
-              className='text-light-yellow font-medium uppercase hover:text-hover-yellow underline'
-            >
-              criar conta
-            </a>
+            <Link to="/register-option">
+              <a
+                className='text-light-yellow font-medium uppercase hover:text-hover-yellow underline'
+              >
+                criar conta
+              </a>
+            </Link>
 
             <Button
               variant='primary'
               size='md'
               borderRadius='rounded'
               className='uppercase font-medium tracking-wide py-3 !text-[15px] !w-[200px] '
+              as={Link}
+              to="/login"
             >
               entrar
             </Button>
