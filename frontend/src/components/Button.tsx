@@ -23,7 +23,7 @@ export const Button = ({
 }: ButtonProps) => {
   const sizeStyles = {
     sm: 'px-3 py-2 text-[14px]',
-    md: 'px-5 py-2.5 text-[18px]',
+    md: 'px-5 py-4 text-[14px]',
     lg: 'px-8 py-4 text-[23px]'
   }
 

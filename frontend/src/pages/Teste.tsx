@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button"
+import { Footer } from "@/components/Footer"
 
 export const Teste = () => {
   return (
@@ -24,6 +25,7 @@ export const Teste = () => {
         Click me
         </Button> 
       </div>
+      <Footer />
     </div>
   )
 }
