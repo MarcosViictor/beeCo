@@ -5,19 +5,7 @@
   --color-white: #FFFFFF;
   --color-light-yellow: #FFC059;
   --color-off-white: #FFFCF7;
-
-  --font-size-69px: 3.833rem;
-  --font-size-55px: 3.056rem;
-  --font-size-44px: 2.444rem;
-  --font-size-35px: 1.944rem;
-  --font-size-28px: 1.556rem;
-  --font-size-23px: 1.278rem;
-  --font-size-18px: 1.000rem;
-  --font-size-14px: 0.778rem;
-  --font-size-12px: 0.667rem;
-
-  --border-radius-10px: 10px;
-  --border-radius-50px: 50px;
+  --color-hover-yellow: #E5AC4F;
 }
 
 /* Configuração global da fonte Poppins */
