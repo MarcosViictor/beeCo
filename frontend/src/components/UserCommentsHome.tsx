@@ -1,7 +1,7 @@
 import { CardComment } from "./CardComment"
 import { comments } from "@/utils/Comments"
 
-export const UserComments = () => {
+export const UserCommentsHome = () => {
   return (
     <section className="w-full h-full flex flex-col items-center justify-center gap-6">
       <div className="flex flex-col items-center justify-center gap-2">
