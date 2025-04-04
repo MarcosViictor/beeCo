@@ -6,11 +6,14 @@
   --color-light-yellow: #ffc059;
   --color-off-white: #fffcf7;
   --color-hover-yellow: #e5ac4f;
-  --color-soft-yellow: #ffe9c6; 
+  --color-soft-yellow: #ffe9c6;
 }
 
-/* Configuração global da fonte Poppins */
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Poppins', sans-serif;
   background-color: var(--color-off-white);
 }

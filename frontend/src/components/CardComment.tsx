@@ -23,7 +23,7 @@ export const CardComment = ({
         </div>
         
         <div className="flex flex-col mb-2">
-          <h2 className="text-[1.1rem] font-bold text-dark-gray">{name}</h2>
+          <h2 className="text-[1.1rem] font-semibold text-dark-gray">{name}</h2>
           <p className=" text-gray-500">{profession}</p>
           
           <div className="flex items-center gap-2 ">
