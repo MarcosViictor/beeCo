@@ -1,1 +1,54 @@
-@import "tailwindcss";b
+@import 'tailwindcss';
+
+@theme {
+  --color-dark-gray: #404040;
+  --color-white: #ffffff;
+  --color-light-yellow: #ffc059;
+  --color-off-white: #fffcf7;
+  --color-hover-yellow: #e5ac4f;
+  --color-soft-yellow: #ffe9c6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-off-white);
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+  background-color: var(--color-light-yellow);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-50px);
+  padding: 10px 20px;
+  font-size: var(--font-size-18px);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: darken(var(--color-light-yellow), 10%);
+}
+
+.btn-large {
+  padding: 15px 30px;
+  font-size: var(--font-size-23px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-light-yellow);
+  border: 2px solid var(--color-light-yellow);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-light-yellow);
+  color: var(--color-white);
+}
