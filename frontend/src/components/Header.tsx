@@ -19,12 +19,22 @@ export const Header = () => {
             </li>
             <li>
               <a href='#' className='hover:text-light-yellow'>
-                serviços
+                sobre nós
               </a>
             </li>
             <li>
               <a href='#' className='hover:text-light-yellow'>
-                sobre nós
+                recursos
+              </a>
+            </li>
+            <li>
+              <a href='#' className='hover:text-light-yellow'>
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href='#' className='hover:text-light-yellow'>
+                contato
               </a>
             </li>
           </ul>
