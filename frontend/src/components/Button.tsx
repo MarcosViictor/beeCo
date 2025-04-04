@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, ElementType } from 'react'
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'outline' | 'softYellow' 
   size?: 'sm' | 'md' | 'lg'
-  width?: 'auto' | 'full'
+  width?: 'auto' | 'md' | 'full' 
   className?: string
   as?: ElementType
   to?: string 
@@ -31,6 +31,7 @@ export const Button = ({
 
   const widthStyles = {
     auto: 'w-auto min-w-[120px]',
+    md: "w-[200px]", 
     full: 'w-full'
   }
 

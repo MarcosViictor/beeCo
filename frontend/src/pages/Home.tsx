@@ -1,12 +1,15 @@
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
-import { UserComments } from "@/components/UserCommentsHome"
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
+import { HeroSection } from '@/components/HeroSection'
+
 export const Home = () => {
   return (
-    <div>
-        <Header/>
-        <UserComments/>
-        <Footer/>
-    </div>
-  )
+    <>
+      <Header />
+      <div className='px-30'>
+        <HeroSection />
+      </div>
+      <Footer />
+    </>
+  )
 }
