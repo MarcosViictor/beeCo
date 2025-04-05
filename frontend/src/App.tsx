@@ -4,6 +4,7 @@ import { RegisterProfessional } from '@/pages/RegisterProfessional'
 import { RegisterClient } from '@/pages/RegisterClient'
 import { RegisterOptionUser } from '@/pages/RegisterOptionUser'
 import { Home } from '@/pages/Home'
+import { AnnouncementPage } from './pages/AnnouncementPage'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/announcement" element={<AnnouncementPage/>} />
         <Route path="/register-option" element={<RegisterOptionUser />} />
         <Route path="/register-professional" element={<RegisterProfessional />} />
         <Route path="/register-client" element={<RegisterClient />} />
