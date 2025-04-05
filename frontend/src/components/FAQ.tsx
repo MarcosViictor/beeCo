@@ -6,7 +6,7 @@ export const FAQ = () => {
   return (
     <section className="w-full h-full flex flex-col items-center justify-center gap-6">
       <div className="flex flex-col items-center justify-center gap-2">
-        <h2 className="text-bold text-[2rem]">Perguntas Frequentes</h2>
+        <h2 className="font-semibold text-[2rem]">Perguntas Frequentes</h2>
       </div>
 
       {DataFAQ.map((item) => (
