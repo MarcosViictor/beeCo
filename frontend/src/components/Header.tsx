@@ -36,7 +36,7 @@ export const Header = () => {
               <a href='#' className='hover:text-light-yellow'>
                 contato
               </a>
-            </li>
+            </li> 
           </ul>
 
           <div className='flex items-center gap-12'>
@@ -49,6 +49,7 @@ export const Header = () => {
               borderRadius='rounded'
               className='uppercase font-medium tracking-wide py-3 text-sm'
               as={Link}
+              to='/login'
               to='/login'
             >
               criar conta
