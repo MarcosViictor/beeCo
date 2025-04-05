@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('contratantes', function (Blueprint $table) {
             $table->id('id_contratante');
-            $table -> foreignId('id_usuarios') -> constrained('usuarios', 'id_usuarios');
+            $table -> foreignId('id_usuarios') -> constrained('users', 'id_usuarios');
             $table -> string('foto_local') -> nullable();
             $table->timestamps();
         });

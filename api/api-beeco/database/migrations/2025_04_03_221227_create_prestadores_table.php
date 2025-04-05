@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('prestadores', function (Blueprint $table) {
             $table->id();
-            $table -> foreignId('id_usuarios') -> constrained('usuarios', 'id_usuarios');
+            $table -> foreignId('id_usuarios') -> constrained('users', 'id_usuarios');
             $table -> string('profissao');
             $table -> string('sobre') -> nullable();
             $table -> string('foto_1') -> nullable();
