@@ -1,17 +1,21 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-dark-gray: #404040;
-  --color-white: #FFFFFF;
-  --color-light-yellow: #FFC059;
-  --color-off-white: #FFFCF7;
-  --color-hover-yellow: #E5AC4F;
-  --color-soft-yellow: #FFE9C6;
+  --color-white: #ffffff;
+  --color-light-yellow: #ffc059;
+  --color-off-white: #fffcf7;
+  --color-hover-yellow: #e5ac4f;
+  --color-soft-yellow: #ffe9c6;
 }
 
-/* Configuração global da fonte Poppins */
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Poppins', sans-serif;
+  background-color: var(--color-off-white);
 }
 
 .font-poppins {
@@ -48,4 +52,3 @@ body {
   background-color: var(--color-light-yellow);
   color: var(--color-white);
 }
-

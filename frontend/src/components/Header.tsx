@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import Logo from '../assets/logo.svg'
-import Button from './Button' // Importando o botão
+import Logo from '@/assets/logo.svg'
+import { Button } from '@/components/Button' // Importando o botão
 
 export const Header = () => {
   return (
-    <header className=' flex justify-center items-center py-4 px-30 bg-off-white'>
+    <header className=' flex justify-center items-center py-4 bg-off-white'>
       <div className='flex gap-23 items-center '>
         <a href='#'>
           <img src={Logo} alt='BeeCo Logo' className='h-19' />
@@ -34,7 +34,7 @@ export const Header = () => {
             </li>
             <li>
               <a href='#' className='hover:text-light-yellow'>
-                Contato 
+                contato
               </a>
             </li> 
           </ul>
@@ -42,21 +42,17 @@ export const Header = () => {
           <div className='flex items-center gap-12'>
             <span className='text-light-yellow'>|</span>
 
-            <Link to='/register-option'>
-              <a className='text-light-yellow font-medium uppercase hover:text-hover-yellow underline'>
-                criar conta
-              </a>
-            </Link>
-
             <Button
               variant='primary'
               size='md'
+              width='md'
               borderRadius='rounded'
-              className='uppercase font-medium tracking-wide py-3 !text-[15px] !w-[200px] '
+              className='uppercase font-medium tracking-wide py-3 text-sm'
               as={Link}
               to='/login'
+              to='/login'
             >
-              entrar
+              criar conta
             </Button>
           </div>
         </nav>
