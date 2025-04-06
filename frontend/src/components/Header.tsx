@@ -1,46 +1,53 @@
 import { Link } from 'react-router-dom'
 import Logo from '@/assets/logo.svg'
-import { Button } from '@/components/Button' // Importando o botão
+import { Button } from '@/components/Button'
 
 export const Header = () => {
   return (
-    <header className=' flex justify-center items-center py-4 bg-off-white'>
+    <header id='inicio' className='flex justify-center items-center py-4 bg-off-white'>
       <div className='flex gap-23 items-center '>
         <a href='#'>
           <img src={Logo} alt='BeeCo Logo' className='h-19' />
         </a>
 
         <nav className='flex items-center gap-18'>
-          <ul className='flex gap-20 text-dark-gray font-medium uppercase tracking-tight'>
+          <ul className='flex gap-18 text-dark-gray font-medium uppercase tracking-tight'>
             <li>
-              <a href='#' className='text-light-yellow'>
+              <a href='#inicio' className='text-light-yellow'>
                 início
               </a>
             </li>
             <li>
-              <a href='#' className='hover:text-light-yellow'>
+              <a href='#sobre' className='hover:text-light-yellow'>
                 sobre nós
               </a>
             </li>
             <li>
-              <a href='#' className='hover:text-light-yellow'>
+              <a href='#recursos' className='hover:text-light-yellow'>
                 recursos
               </a>
             </li>
             <li>
-              <a href='#' className='hover:text-light-yellow'>
+              <a href='#faq' className='hover:text-light-yellow'>
                 FAQ
               </a>
             </li>
             <li>
-              <a href='#' className='hover:text-light-yellow'>
+              <a href='#contato' className='hover:text-light-yellow'>
                 contato
               </a>
-            </li> 
+            </li>
           </ul>
 
-          <div className='flex items-center gap-12'>
+          <div className='flex items-center gap-11'>
             <span className='text-light-yellow'>|</span>
+
+            <a
+              href=''
+              className='text-light-yellow underline uppercase font-medium tracking-wide text-sm'
+            >
+              criar conta
+            </a>
 
             <Button
               variant='primary'
@@ -50,9 +57,8 @@ export const Header = () => {
               className='uppercase font-medium tracking-wide py-3 text-sm'
               as={Link}
               to='/login'
-              to='/login'
             >
-              criar conta
+              Entrar
             </Button>
           </div>
         </nav>

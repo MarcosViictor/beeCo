@@ -5,7 +5,6 @@ import { HeroSection } from '@/components/HeroSection'
 import { FAQ } from '@/components/FAQ'
 import { About } from '@/components/About'
 import { Resources } from '@/components/Resources'
-import { AnnouncementDetail } from '@/components/AnnouncementDetail'
 
 export const Home = () => {
   return (

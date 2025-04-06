@@ -24,7 +24,7 @@ export const SideMenu = () => {
       />
 
       <nav className={`flex flex-col gap-3 fixed top-0 h-full bg-white shadow-lg z-50 p-6 transition-all ease-in-out duration-300 ${isOpen ? 'w-80' : 'w-18'}`}>
-        <button className="flex items-center justify-center mb-4 cursor-pointer" onClick={toggleClickMenu}>
+        <button className="flex items-center justify-start mb-4 mr-1 cursor-pointer" onClick={toggleClickMenu}>
           <Menu size={iconSize} strokeWidth={2} />
         </button>
 

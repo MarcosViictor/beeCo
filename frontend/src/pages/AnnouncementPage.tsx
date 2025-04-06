@@ -7,7 +7,6 @@ import { SideMenu } from "@/components/SideMenu";
 export const AnnouncementPage = () => {
   return (
     <>
-      <Header />
       <SideMenu />
       <GalleryRoulette />
       <AnnouncementDetail />
