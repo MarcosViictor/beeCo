@@ -37,4 +37,10 @@ class Prestador extends Model
     {
         return $this->hasMany(Avaliacao::class, 'id_prestador', 'id_prestador');
     }
+
+    public function favoritos()
+    {
+        return $this->hasMany(Favoritos::class, 'id_prestador', 'id_prestador');
+    }
 }
+

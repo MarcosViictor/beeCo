@@ -26,5 +26,11 @@ class Contratante extends Model
     {
         return $this->hasMany(Avaliacao::class, 'id_contratante', 'id_contratante');
     }
+
+    public function favoritos()
+    {
+        return $this->hasMany(Favoritos::class, 'id_contratante', 'id_contratante');
+    }
+    
 }
 
