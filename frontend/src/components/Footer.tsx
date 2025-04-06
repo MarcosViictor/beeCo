@@ -5,7 +5,7 @@ import Youtube from '@/assets/YouTube.svg'
 
 export const Footer = () => {
     return (
-      <footer className='bg-white text-dark-gray px-30 py-6  flex flex-col gap-4 '>
+      <footer id="contato" className='bg-white text-dark-gray px-30 py-6  flex flex-col gap-4 '>
         <div className='flex justify-around text-[.9rem]'>
           <div className='flex flex-col gap-4 '>
             <h4 className='text-4xl text-dark-gray leading-[2.5rem]'>
@@ -35,7 +35,6 @@ export const Footer = () => {
             <ul className='flex flex-col gap-2 text-dark-gray'>
               <li className='cursor-pointer underline'>Chat ao vivo</li>
               <li className='cursor-pointer underline'>Contratos Digitais</li>
-              <li className='cursor-pointer underline'>Agendamentos</li>
               <li className='cursor-pointer underline'>Avaliações</li>
             </ul>
           </div>

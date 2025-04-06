@@ -2,7 +2,7 @@ import { ResourcesCards } from './ResourcesCards'
 
 export const Resources = () => {
   return (
-    <section className='bg-white py-14'>
+    <section id='recursos' className='bg-white py-14'>
       <div className='flex flex-col gap-8 justify-center items-center'>
         <h2 className='font-semibold text-4xl text-dark-gray'>
           Recursos que Transforman

@@ -3,7 +3,7 @@ import Button from "./Button"
 
 export const About = () => {
   return (
-    <section className='flex gap-18 justify-center bg-off-white'>
+    <section id="sobre" className='flex gap-18 justify-center bg-off-white py-10'>
       <div>
         <img
           src={Providers}

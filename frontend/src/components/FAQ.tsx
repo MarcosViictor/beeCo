@@ -4,7 +4,7 @@ import { DataFAQ } from "@/utils/DataFAQ"
 
 export const FAQ = () => {
   return (
-    <section className="w-full h-full flex flex-col items-center justify-center gap-6">
+    <section id="faq" className="w-full flex flex-col items-center justify-center gap-10 py-10">
       <div className="flex flex-col items-center justify-center gap-2">
         <h2 className="font-semibold text-[2rem]">Perguntas Frequentes</h2>
       </div>

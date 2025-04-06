@@ -15,7 +15,7 @@ export const SideMenuItem = ({ icon, label, isOpen, isActive = false, onClick }:
         flex ${isOpen ? 'justify-start' : 'justify-center'}
         items-center
         px-3 gap-3 cursor-pointer 
-        transition-all ease-in-out rounded-[10px] h-12
+        transition-all ease-in-out rounded-[10px] h-12 ml-1
         ${isActive && isOpen ? 'text-white bg-light-yellow' : ''}
         ${isActive && !isOpen ? 'text-light-yellow' : ''}
       `}

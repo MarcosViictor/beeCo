@@ -3,7 +3,7 @@ import Button from './Button'
 
 export const HeroSection = () => {
   return (
-    <section className='flex justify-center items-center gap-45 px-10 bg-off-white'>
+    <section className='flex justify-center items-center gap-60 px-10 bg-off-white'>
       <div className='flex gap-6 flex-col'>
         <h1 className='font-[400] text-[4rem] text-dark-gray leading-[2.5rem]'>
           <span className='font-bold'>Bee</span>Co
@@ -19,7 +19,7 @@ export const HeroSection = () => {
         flex gap-5'
         >
           <Button width='md' variant='outline' className='uppercase'>
-            entrar
+            experimentar agora
           </Button>
         </div>
       </div>
