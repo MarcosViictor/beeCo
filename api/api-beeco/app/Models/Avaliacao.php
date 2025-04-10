@@ -23,6 +23,7 @@ class Avaliacao extends Model
     // Relacionamento: Uma avaliação pertence a um contratante
     public function contratante()
     {
+        #teste
         return $this->belongsTo(Contratante::class, 'id_contratante', 'id_contratante');
     }
 
