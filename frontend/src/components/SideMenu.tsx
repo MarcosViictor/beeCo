@@ -1,6 +1,6 @@
-import { Home, Bell, MessageSquare, User, LogOut, Menu } from "lucide-react"
+import { Home, MessageSquare, User, LogOut, Menu, Search } from "lucide-react"
 import { useState } from "react"
-import { SideMenuItem } from "./SideMenuItem" // ajuste o caminho se necessário
+import { SideMenuItem } from "./SideMenuItem"
 
 export const SideMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,11 +36,11 @@ export const SideMenu = () => {
           onClick={() => handleItemClick("Início")}
         />
         <SideMenuItem 
-          icon={<Bell size={iconSize} />} 
-          label="Notificações" 
+          icon={<Search size={iconSize} />} 
+          label="Pesquisar" 
           isOpen={isOpen} 
-          isActive={activeItem === "Notificações"}
-          onClick={() => handleItemClick("Notificações")}
+          isActive={activeItem === "Pesquisar"}
+          onClick={() => handleItemClick("Pesquisar")}
         />
         <SideMenuItem 
           icon={<MessageSquare size={iconSize} />} 

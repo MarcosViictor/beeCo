@@ -62,7 +62,7 @@ export const Button = ({
         text-center
         ${className}
         cursor-pointer
-        gap-3
+        gap-1
       `}
       {...props}
     >
