@@ -5,6 +5,7 @@ import { RegisterClient } from '@/pages/RegisterClient'
 import { RegisterOptionUser } from '@/pages/RegisterOptionUser'
 import { Home } from '@/pages/Home'
 import { AnnouncementPage } from './pages/AnnouncementPage'
+import { SearchProfessional } from './pages/SearchProfessional'
 
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/announcement" element={<AnnouncementPage/>} />
-        <Route path="/register-option" element={<RegisterOptionUser />} />
-        <Route path="/register-professional" element={<RegisterProfessional />} />
-        <Route path="/register-client" element={<RegisterClient />} />
+        <Route path="/select/register" element={<RegisterOptionUser />} />
+        <Route path="/professional/register" element={<RegisterProfessional />} />
+        <Route path="/register" element={<RegisterClient />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/search" element={<SearchProfessional />} />
       </Routes>
     </BrowserRouter>
   )
