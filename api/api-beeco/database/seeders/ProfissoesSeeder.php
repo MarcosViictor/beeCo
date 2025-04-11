@@ -57,7 +57,7 @@ class ProfissoesSeeder extends Seeder
         ];
 
         foreach ($profissoes as $profissao){
-            Profissoes::cretae($profissao);
+            Profissoes::create($profissao);
         }
     }
 }
