@@ -4,26 +4,33 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id('id_usuario');
-            $table->string('nome');
-            $table->string('email')->unique();
-            $table->string('senha');
-            $table->date('data_nascimento')->nullable();
-            $table->enum('sexo', ['M', 'F', 'O'])->nullable();
-            $table->enum('tipo', ['contratante', 'prestador']);
-            $table->string('foto_perfil')->nullable();
-            $table->string('telefone')->nullable();
-            $table->foreignId('id_endereco')->nullable()->constrained('enderecos', 'id_endereco');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('users')) {
+            Schema::create('users', function (Blueprint $table) {
+                $table->id('id_usuario'); // Chave primária, auto-incrementada
+                $table->string('nome'); // Obrigatório
+                $table->string('email')->unique(); // Obrigatório, único
+                $table->string('senha'); // Obrigatório
+                $table->date('data_nascimento')->nullable(); // Opcional
+                $table->enum('sexo', ['M', 'F', 'O'])->nullable(); // Opcional
+                $table->enum('tipo', ['contratante', 'prestador']); // Obrigatório
+                $table->string('foto_perfil')->nullable(); // Opcional
+                $table->string('telefone')->nullable(); // Opcional
+                $table->foreignId('id_endereco')->nullable()->constrained('endereco', 'id_endereco'); // Opcional, chave estrangeira
+                $table->timestamps(); // created_at, updated_at
+            });
+        } else {
+            Schema::table('users', function (Blueprint $table) {
+                if (!Schema::hasColumn('users', 'tipo')) {
+                    $table->enum('tipo', ['contratante', 'prestador'])->after('email');
+                }
+            });
+        }
     }
 
     /**
