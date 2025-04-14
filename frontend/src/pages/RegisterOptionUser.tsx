@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export const RegisterOptionUser = () => {
   return (
-    <div className='flex flex-col gap-4 justify-center items-center h-screen '>
+    <div className='flex flex-col gap-4 justify-center items-center h-screen bg-[url("./assets/register-option-user.jpg")] bg-cover bg-center'>
       <div className='flex flex-col gap-13 w-[350px] '>
         <div className='flex flex-col gap-2'>
           <h1 className='font-[400] text-[2rem] text-dark-gray leading-[2.5rem]'>

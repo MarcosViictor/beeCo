@@ -11,7 +11,7 @@ export const CardFAQ = ({ title, content }: CardFAQProps) => {
   
   return (
     <div 
-      className="w-[70%] h-full px-10 py-5 flex items-center justify-between bg-white rounded-lg p-4 shadow-sm hover:shadow-md cursor-pointer transition-all duration-300"
+      className=" h-full px-10 py-5 flex items-center justify-between bg-white rounded-lg p-4 shadow-sm hover:shadow-md cursor-pointer transition-all duration-300"
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex-1">

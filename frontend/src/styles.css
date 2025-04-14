@@ -52,3 +52,12 @@ body {
   background-color: var(--color-light-yellow);
   color: var(--color-white);
 }
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}

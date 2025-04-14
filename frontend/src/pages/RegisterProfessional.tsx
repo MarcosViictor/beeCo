@@ -7,7 +7,7 @@ import googleIcon from '@/assets/google.svg'
 
 export const RegisterProfessional = () => {
   return (
-    <div className='flex flex-col justify-center items-center h-screen '>
+    <div className='flex flex-col justify-center items-center h-screen bg-[url("./assets/register-professional.jpg")] bg-cover bg-center'>
       <div className='flex gap-30 justify-center items-center w-[800px] '>
         <div className='flex flex-col gap-4'>
           <div className='flex flex-col gap-4'>
