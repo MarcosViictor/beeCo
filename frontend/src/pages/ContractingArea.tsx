@@ -1,5 +1,6 @@
 import { SideMenu } from '@/components/SideMenu'
 import Professionals from '@/assets/professionals.png'
+import Profissionals2 from '@/assets/professionals2.png'
 import Button from '@/components/Button'
 import { ProfessionalCard } from '@/components/ProfessionalCard'
 import { DataProfessionals } from '@/mock/DataProfessionals'
@@ -62,6 +63,40 @@ export const ContractingArea = () => {
               {DataProfessionals.slice(0, 3).map((item, index) => (
                 <ProfessionalCard key={index} {...item} />
               ))}
+            </div>
+          </section>
+
+          <section className='p-10 flex'>
+            <img
+              src={Profissionals2}
+              className='w-[550px]'
+              alt='Imagem ilustrativa de profissionais'
+            />
+
+            <div className='flex flex-col p-8 gap-10 bg-light-yellow-2 rounded-xl'>
+              <h4 className='text-4xl text-dark-gray leading-[2.5rem]'>
+                <span className='font-bold'>Bee</span>Co
+              </h4>
+
+              <p className='text-dark-gray max-w-[450px] text-sm'>
+                O BeeCo é uma plataforma que aproxima profissionais
+                qualificados de clientes que buscam serviços com agilidade,
+                segurança e transparência. Através de uma interface simples e
+                intuitiva, oferecemos ferramentas que facilitam o processo de
+                contratação.
+              </p>
+
+              <p className='text-dark-gray max-w-[450px] text-sm'>
+                Nosso sistema de chat ao vivo permite uma comunicação clara e
+                instantânea, eliminando mal-entendidos. Além disso,
+                oferecemos contratos digitais simplificados, com termos claros e
+                proteção para ambas as partes, garantindo mais segurança para
+                quem contrata e para quem presta o serviço.
+              </p>
+
+              <Button width='md' variant='primary' borderRadius='rounded'>
+                Ver mais
+              </Button>
             </div>
           </section>
         </div>
