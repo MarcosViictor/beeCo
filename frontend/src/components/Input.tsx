@@ -8,11 +8,21 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, fullWidth = false, className = '', type = 'text', ...props }, ref) => {
+  (
+    {
+      label,
+      error,
+      fullWidth = false,
+      className = '',
+      type = 'text',
+      ...props
+    },
+    ref
+  ) => {
     return (
       <div className={`flex flex-col ${fullWidth ? 'w-full' : 'w-auto'}`}>
         {label && (
-          <label className="text-[.9rem] font-[400] text-dark-gray mb-1">
+          <label className='text-[.9rem] font-[400] text-dark-gray mb-1'>
             {label}
           </label>
         )}
@@ -32,7 +42,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           type={type}
         />
         {error && (
-          <span className="text-red-500 text-[12px] mt-1">{error}</span>
+          <span className='text-red-500 text-[12px] mt-1'>{error}</span>
         )}
       </div>
     )
@@ -40,5 +50,3 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 )
 
 Input.displayName = 'Input'
-
-

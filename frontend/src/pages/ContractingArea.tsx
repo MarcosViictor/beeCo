@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { Footer } from '@/components/Footer'
 import { ServiceCard } from '@/components/ServiceCard'
 import { services } from '@/mock/DataServiceCards'
+import { Input } from '@/components/Input'
 
 export const ContractingArea = () => {
   const navigate = useNavigate()
@@ -132,6 +133,15 @@ export const ContractingArea = () => {
             </div>
           </section>
         </div>
+        <section className='px-10 py-20 flex items-center justify-center bg-light-yellow-2'>
+
+          <Input
+            placeholder='Pesquisar profissionais'
+            className='rounded-l-4xl bg-white border-none w-[500px]'
+          />
+          <Button className='rounded-r-4xl'>Enviar</Button>
+          
+        </section>
         <Footer />
       </main>
     </div>
