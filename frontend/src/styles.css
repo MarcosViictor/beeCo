@@ -2,12 +2,12 @@
 
 @theme {
   --color-dark-gray: #404040;
-  --color-white: #ffffff;
+  /* --color-white: #ffffff; */
   --color-light-yellow: #ffc059;
-  --color-off-white: #fffcf7;
   --color-hover-yellow: #e5ac4f;
+  --color-off-white: #fffcf7;
   --color-soft-yellow: #ffe9c6;
-  --color-light-yellow-2: #ffeed1;
+  --color-light-yellow-2: #fff4e4;
 }
 
 body {

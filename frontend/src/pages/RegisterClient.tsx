@@ -1,8 +1,6 @@
 import { Button } from '@/components/Button'
 import { Input } from '@/components/Input'
-
 import { Link } from 'react-router-dom'
-
 import googleIcon from '@/assets/google.svg'
 
 export const RegisterClient = () => {
