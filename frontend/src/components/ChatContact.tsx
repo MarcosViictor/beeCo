@@ -7,6 +7,7 @@ interface ChatContactProps {
   unreadCount?: number;
   avatarUrl?: string;
   isClosed?: boolean;
+  onClick?: () => void;
 }
 
 export const ChatContact: React.FC<ChatContactProps> = ({
@@ -14,10 +15,11 @@ export const ChatContact: React.FC<ChatContactProps> = ({
   lastMessage,
   timestamp,
   unreadCount,
-  isClosed = false
+  isClosed = false,
+  onClick
 }) => {
   return (
-    <div className="flex items-center p-4 hover:bg-gray-50 cursor-pointer">
+    <div className="flex items-center p-4 hover:bg-gray-50 cursor-pointer" onClick={onClick}>
       <div className="relative">
        
           
