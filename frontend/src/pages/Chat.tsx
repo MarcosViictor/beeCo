@@ -42,7 +42,7 @@ export const Chat = () => {
     return (
         <>
             <SideMenu />
-            <div className="flex ml-25 mr-18 py-7 h-screen">
+            <div className="flex ml-25 mr-18 py-7 h-screen justify-center">
                 <div className="flex flex-col pr-10 border-r-2 border-gray-300 w-[400px] gap-2">
                     <Input
                         placeholder="Pesquisar"
