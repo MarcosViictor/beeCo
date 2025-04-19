@@ -1,18 +1,24 @@
 import { Home, MessageSquare, User, LogOut, Menu, Search } from "lucide-react"
 import { useState } from "react"
+import { useLocation, useNavigate } from "react-router-dom"
 import { SideMenuItem } from "./SideMenuItem"
 
 export const SideMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState("Início")
+  const location = useLocation()
+  const navigate = useNavigate()
   const iconSize = 22
+
+  const getActiveItem = (path: string) => {
+    return location.pathname === path
+  }
 
   const toggleClickMenu = () => {
     setIsOpen(!isOpen)
   }
 
-  const handleItemClick = (label: string) => {
-    setActiveItem(label)
+  const handleNavigation = (path: string) => {
+    navigate(path)
   }
 
   return (
@@ -32,37 +38,36 @@ export const SideMenu = () => {
           icon={<Home size={iconSize} />} 
           label="Início" 
           isOpen={isOpen} 
-          isActive={activeItem === "Início"}
-          onClick={() => handleItemClick("Início")}
+          isActive={getActiveItem("/")}
+          onClick={() => handleNavigation("/")}
         />
         <SideMenuItem 
           icon={<Search size={iconSize} />} 
           label="Pesquisar" 
           isOpen={isOpen} 
-          isActive={activeItem === "Pesquisar"}
-          onClick={() => handleItemClick("Pesquisar")}
+          isActive={getActiveItem("/search")}
+          onClick={() => handleNavigation("/search")}
         />
         <SideMenuItem 
           icon={<MessageSquare size={iconSize} />} 
           label="Mensagens" 
           isOpen={isOpen} 
-          isActive={activeItem === "Mensagens"}
-          onClick={() => handleItemClick("Mensagens")}
+          isActive={getActiveItem("/chat")}
+          onClick={() => handleNavigation("/chat")}
         />
         <SideMenuItem 
           icon={<User size={iconSize} />} 
           label="Perfil" 
           isOpen={isOpen} 
-          isActive={activeItem === "Perfil"}
-          onClick={() => handleItemClick("Perfil")}
+          isActive={getActiveItem("/profile")}
+          onClick={() => handleNavigation("/")}
         />
         <div className="flex-grow" />
         <SideMenuItem 
           icon={<LogOut size={iconSize} />} 
           label="Sair" 
           isOpen={isOpen} 
-          isActive={activeItem === "Sair"}
-          onClick={() => handleItemClick("Sair")}
+          onClick={() => handleNavigation("/")}
         />
       </nav>
     </>
