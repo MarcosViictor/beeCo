@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Endereco extends Model
 {
-    protected $table = 'enderecos';
+    protected $table = 'endereco';
     protected $primaryKey = 'id_endereco';
     public $incrementing = true;
 
@@ -22,7 +22,7 @@ class Endereco extends Model
     ];
 
     public function user(){
-        return $this -> hasOne(User::class, 'id_endereco', 'id_endereco');
+        return $this -> hasOne(Users::class, 'id_endereco', 'id_endereco');
     }
 
 }
