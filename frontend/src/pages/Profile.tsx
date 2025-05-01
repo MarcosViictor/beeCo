@@ -143,7 +143,7 @@ export const Profile = () => {
                 )
             case 'Serviços':
                 return (
-                    <>
+                    <div className="w-full">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <Textarea 
                                 label="Descrição do serviço"
@@ -151,8 +151,8 @@ export const Profile = () => {
                                 className="min-h-[100px]"
                             />
                             <Textarea 
-                                label="Descrição do serviço"
-                                placeholder="Detalhe como é seu serviço..."
+                                label="Descrição de experiência"
+                                placeholder="Detalhe sobre sua experiência"
                                 className="min-h-[100px]"
                             />
                             <Select label="Tipo do serviço">
@@ -171,7 +171,16 @@ export const Profile = () => {
                           
                         </div>
 
-                    </>
+                        {/* <div className="flex w-full mt-8">
+                            <Button
+                            size="sm"
+                            width="full"
+                            >
+                                Salvar
+                            </Button>
+                        </div> */}
+
+                    </div>
                 )
             case 'Disponibilidade':
                 return (
