@@ -133,15 +133,6 @@ export const ContractingArea = () => {
             </div>
           </section>
         </div>
-        <section className='px-10 py-20 flex items-center justify-center bg-light-yellow-2'>
-
-          <Input
-            placeholder='Pesquisar profissionais'
-            className='rounded-l-4xl bg-white border-none w-[500px]'
-          />
-          <Button className='rounded-r-4xl'>Enviar</Button>
-          
-        </section>
         <Footer />
       </main>
     </div>
