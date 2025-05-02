@@ -19,10 +19,9 @@ class Endereco extends Model
         'cep',
     ];
 
+    public function user(){
+        return $this -> hasOne(Users::class, 'id_endereco', 'id_endereco');
 
-    public function user()
-    {
-        return $this->hasOne(User::class, 'id_endereco', 'id_endereco');
     }
 
 }

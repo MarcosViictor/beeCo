@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -28,7 +29,7 @@ class AuthController extends Controller
             // Hash da senha antes de criar
             $validated['senha'] = Hash::make($validated['senha']);
 
-            $user = User::create($validated);
+            $user = Users::create($validated);
 
             $token = JWTAuth::fromUser($user);
 
@@ -53,15 +54,18 @@ class AuthController extends Controller
                 'senha' => 'required|string',
             ]);
 
-            $token = JWTAuth::attempt(['email' => $credentials['email'], 'password' => $credentials['senha']]);
+            // Encontrar o usuário pelo email
+            $user = Users::where('email', $credentials['email'])->first();
 
-            if (!$token) {
+            if (!$user || !Hash::check($credentials['senha'], $user->senha)) {
                 return response()->json([
                     'message' => 'Credenciais inválidas',
+                    'debug' => 'Usuário não encontrado ou senha incorreta',
                 ], 401);
             }
 
-            $user = auth()->user();
+            // Se as credenciais estiverem corretas, gerar o token manualmente
+            $token = JWTAuth::fromUser($user);
 
             return response()->json([
                 'message' => 'Login bem-sucedido',
@@ -71,6 +75,11 @@ class AuthController extends Controller
         } catch (JWTException $e) {
             return response()->json([
                 'message' => 'Erro ao gerar token',
+                'error' => $e->getMessage(),
+            ], 500);
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' => 'Erro no servidor',
                 'error' => $e->getMessage(),
             ], 500);
         }

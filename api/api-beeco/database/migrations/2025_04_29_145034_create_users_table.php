@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         if (!Schema::hasTable('users')) {
             Schema::create('users', function (Blueprint $table) {
-                $table->id('id_usuario'); // Chave primária, auto-incrementada
+                $table->id(); // Chave primária 'id', auto-incrementada
                 $table->string('nome'); // Obrigatório
                 $table->string('email')->unique(); // Obrigatório, único
                 $table->string('senha'); // Obrigatório
@@ -22,12 +22,16 @@ return new class extends Migration {
                 $table->string('foto_perfil')->nullable(); // Opcional
                 $table->string('telefone')->nullable(); // Opcional
                 $table->foreignId('id_endereco')->nullable()->constrained('endereco', 'id_endereco'); // Opcional, chave estrangeira
+                $table->rememberToken(); // Adicionando o campo remember_token
                 $table->timestamps(); // created_at, updated_at
             });
         } else {
             Schema::table('users', function (Blueprint $table) {
                 if (!Schema::hasColumn('users', 'tipo')) {
                     $table->enum('tipo', ['contratante', 'prestador'])->after('email');
+                }
+                if (!Schema::hasColumn('users', 'remember_token')) {
+                    $table->rememberToken();
                 }
             });
         }
@@ -41,3 +45,4 @@ return new class extends Migration {
         Schema::dropIfExists('users');
     }
 };
+

@@ -6,6 +6,8 @@ import { RegisterOptionUser } from '@/pages/RegisterOptionUser'
 import { Home } from '@/pages/Home'
 import { AnnouncementPage } from './pages/AnnouncementPage'
 import { SearchProfessional } from './pages/SearchProfessional'
+import { Chat } from './pages/Chat'
+import { Profile } from './pages/Profile'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/register" element={<RegisterClient />} />
         <Route path="/login" element={<Login />} />
         <Route path="/search" element={<SearchProfessional />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import HouseImage from "@/assets/HouseImage.png";
+import HouseImage from "@/assets/houseImage.png";
 import "../styles/HideScrollBar.css";
 
 const images: string[] = Array.from({ length: 15 }, () => HouseImage);

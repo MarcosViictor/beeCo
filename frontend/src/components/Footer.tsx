@@ -1,7 +1,7 @@
 import Facebook from "@/assets/facebook.svg"
-import Twitter from "@/assets/Twitter.svg"
-import Instagram from "@/assets/Instagram.svg"
-import Youtube from '@/assets/YouTube.svg'
+import Twitter from "@/assets/twitter.svg"
+import Instagram from "@/assets/instagram.svg"
+import Youtube from '@/assets/youtube.svg'
 
 export const Footer = () => {
     return (
