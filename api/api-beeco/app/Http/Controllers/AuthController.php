@@ -88,7 +88,7 @@ class AuthController extends Controller
     public function me(Request $request)
     {
         try {
-            $user = auth()->user();
+            $user = Auth::user();
 
             if (!$user) {
                 return response()->json([
