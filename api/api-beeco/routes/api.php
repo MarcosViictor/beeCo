@@ -14,3 +14,9 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     Route::put('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'update']);
     Route::delete('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'destroy']);
 //});
+
+//Route::middleware(['auth:sanctum'])->group(function () {
+    Route::get('/favoritos', [\App\Http\Controllers\FavoritoController::class, 'index']);
+    Route::post('/favoritos', [\App\Http\Controllers\FavoritoController::class, 'store']);
+    Route::delete('/favoritos/{id}', [\App\Http\Controllers\FavoritoController::class, 'destroy']);
+//});
