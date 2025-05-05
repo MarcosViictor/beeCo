@@ -1,4 +1,4 @@
-import { Home, MessageSquare, User, LogOut, Menu, Search } from "lucide-react"
+import { Home, MessageSquare, User, LogOut, Menu, Search, Heart } from "lucide-react"
 import { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { SideMenuItem } from "./SideMenuItem"
@@ -47,6 +47,13 @@ export const SideMenu = () => {
           isOpen={isOpen} 
           isActive={getActiveItem("/search")}
           onClick={() => handleNavigation("/search")}
+        />
+        <SideMenuItem 
+          icon={<Heart size={iconSize} />} 
+          label="Favoritos" 
+          isOpen={isOpen} 
+          isActive={getActiveItem("/favorites")}
+          onClick={() => handleNavigation("/favorites")}
         />
         <SideMenuItem 
           icon={<MessageSquare size={iconSize} />} 
