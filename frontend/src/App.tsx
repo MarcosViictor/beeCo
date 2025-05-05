@@ -8,6 +8,7 @@ import { AnnouncementPage } from './pages/AnnouncementPage'
 import { SearchProfessional } from './pages/SearchProfessional'
 import { Chat } from './pages/Chat'
 import { Profile } from './pages/Profile'
+import { Favorites } from './pages/Favorites'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/search" element={<SearchProfessional />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path='/favorites' element={<Favorites />} />
       </Routes>
     </BrowserRouter>
   )
