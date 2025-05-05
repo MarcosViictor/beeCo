@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom'
 import { Footer } from '@/components/Footer'
 import { ServiceCard } from '@/components/ServiceCard'
 import { services } from '@/mock/DataServiceCards'
-import { Input } from '@/components/Input'
 
 export const ContractingArea = () => {
   const navigate = useNavigate()

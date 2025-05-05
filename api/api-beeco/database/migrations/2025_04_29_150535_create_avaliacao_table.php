@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('avaliacaos', function (Blueprint $table) {
+        Schema::create('avaliacao', function (Blueprint $table) {
             $table->id('id_avaliacao');
             $table->text('descricao')->nullable();
             $table->unsignedInteger('nota'); // Removi CHECK por compatibilidade
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('avaliacaos');
+        Schema::dropIfExists('avaliacao');
     }
 };

@@ -6,6 +6,7 @@ import { RegisterOptionUser } from '@/pages/RegisterOptionUser'
 import { Home } from '@/pages/Home'
 import { AnnouncementPage } from './pages/AnnouncementPage'
 import { SearchProfessional } from './pages/SearchProfessional'
+import { Chat } from './pages/Chat'
 import { ContractingArea } from './pages/ContractingArea'
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/contracting' element={<ContractingArea />} />
         <Route path='/announcement' element={<AnnouncementPage />} />
+        <Route path='/contracting' element={<ContractingArea />} />
         <Route path='/select/register' element={<RegisterOptionUser />} />
         <Route
           path='/professional/register'
@@ -23,6 +24,7 @@ function App() {
         <Route path='/register' element={<RegisterClient />} />
         <Route path='/login' element={<Login />} />
         <Route path='/search' element={<SearchProfessional />} />
+        <Route path='/chat' element={<Chat />} />
       </Routes>
     </BrowserRouter>
   )
