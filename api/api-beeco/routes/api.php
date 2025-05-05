@@ -49,13 +49,6 @@ Route::get('/test-create-user', function () {
     }
 });
 
-//Route::middleware((['auth:sanctum']))->group(function () {
-Route::get('/enderecos', [\App\Http\Controllers\EnderecoController::class, 'index']);
-Route::post('/enderecos', [\App\Http\Controllers\EnderecoController::class, 'store']);
-Route::get('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'show']);
-Route::put('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'update']);
-Route::delete('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'destroy']);
-//});
 
 
 
@@ -65,3 +58,23 @@ Route::middleware('auth:api')->group(function () {
     Route::put('/user', [UserController::class, 'update']); // Atualizar perfil
     Route::delete('/user', [UserController::class, 'destroy']); // Excluir conta
 });
+
+//Route::middleware((['auth:sanctum']))->group(function () {
+    Route::get('/enderecos', [\App\Http\Controllers\EnderecoController::class, 'index']);
+    Route::post('/enderecos', [\App\Http\Controllers\EnderecoController::class, 'store']);
+    Route::get('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'show']);
+    Route::put('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'update']);
+    Route::delete('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'destroy']);
+//});
+
+Route::middleware(['auth:api'])->group(function () {
+    Route::get('/favoritos', [\App\Http\Controllers\FavoritoController::class, 'index']);
+    Route::post('/favoritos', [\App\Http\Controllers\FavoritoController::class, 'store']);
+    Route::delete('/favoritos/{id}', [\App\Http\Controllers\FavoritoController::class, 'destroy']);
+});
+
+
+
+
+
+
