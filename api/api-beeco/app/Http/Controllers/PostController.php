@@ -29,10 +29,10 @@ class PostController extends Controller
             'tipo_postagem' => 'required|in:contratante,prestador',
             'preco' => 'nullable|numeric',
             'categoria' => 'nullable|string',
-            'imagem' => 'nullable|string', // Modificado para aceitar string em vez de arquivo
+            'imagem' => 'nullable|string', 
         ]);
 
-        // Cria um novo post com os dados do request
+       
         $post = Post::create([
             'user_id' => Auth::id(), 
             'titulo' => $request->titulo,
@@ -40,7 +40,7 @@ class PostController extends Controller
             'tipo_postagem' => $request->tipo_postagem,
             'preco' => $request->preco,
             'categoria' => $request->categoria,
-            'imagem' => $request->imagem, // Usa diretamente o valor da string
+            'imagem' => $request->imagem, 
         ]);
 
         return response()->json($post, 201);
@@ -61,24 +61,22 @@ class PostController extends Controller
             'tipo_postagem' => 'required|in:contratante,prestador',
             'preco' => 'nullable|numeric',
             'categoria' => 'nullable|string',
-            'imagem' => 'nullable|string', // Modificado para aceitar string em vez de arquivo
+            'imagem' => 'nullable|string', 
         ]);
 
         $post = Post::findOrFail($id); 
 
-        // Verifica se o usuário autenticado é o dono do post
         if ($post->user_id !== Auth::id()) {
             return response()->json(['message' => 'Unauthorized'], 403);
         }
 
-        // Atualiza o post com os dados do request
         $post->update([
             'titulo' => $request->titulo,
             'descricao' => $request->descricao,
             'tipo_postagem' => $request->tipo_postagem,
             'preco' => $request->preco,
             'categoria' => $request->categoria,
-            'imagem' => $request->imagem, // Usa diretamente o valor da string
+            'imagem' => $request->imagem, 
         ]);
 
         return response()->json($post);
@@ -88,7 +86,6 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id); 
 
-        // Verifica se o usuário autenticado é o dono do post
         if ($post->user_id !== Auth::id()) {
             return response()->json(['message' => 'Unauthorized'], 403);
         }
