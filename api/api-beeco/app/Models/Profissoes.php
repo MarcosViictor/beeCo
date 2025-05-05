@@ -24,6 +24,6 @@ class Profissoes extends Model
 
     public function creator()
     {
-        return $this->belongsTo(User::class, 'crated_by');
+        return $this->belongsTo(Users::class, 'crated_by');
     }
 }

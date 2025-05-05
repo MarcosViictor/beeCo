@@ -42,7 +42,7 @@ export const SearchProfessional = () => {
                     </Button>
                 </div>
 
-                <div className="flex justify-center items-start flex-wrap gap-5 w-[1800px]">
+                <div className="grid grid-cols-5 gap-6.5 min-w-[1580px]">
                     {DataProfessionals.map((item, index) => (
                         <ProfessionalCard
                             key={index}

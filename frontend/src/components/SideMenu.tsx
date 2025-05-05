@@ -60,7 +60,7 @@ export const SideMenu = () => {
           label="Perfil" 
           isOpen={isOpen} 
           isActive={getActiveItem("/profile")}
-          onClick={() => handleNavigation("/")}
+          onClick={() => handleNavigation("/profile")}
         />
         <div className="flex-grow" />
         <SideMenuItem 

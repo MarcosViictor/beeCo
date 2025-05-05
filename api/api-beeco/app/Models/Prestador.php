@@ -11,13 +11,18 @@ class Prestador extends Model
     public $incrementing = true;
 
     protected $fillable = [
-        'id_usuario', 'profissao', 'sobre', 'foto_servico_1', 'foto_servico_2', 'foto_servico_3'
+        'id_usuario',
+        'profissao',
+        'sobre',
+        'foto_servico_1',
+        'foto_servico_2',
+        'foto_servico_3'
     ];
 
     // Relacionamento: Um prestador pertence a um usuário
     public function user()
     {
-        return $this->belongsTo(User::class, 'id_usuario', 'id');
+        return $this->belongsTo(Users::class, 'id_usuarios', 'id');
     }
 
     // Relacionamento: Um prestador pode ter muitos serviços

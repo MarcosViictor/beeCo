@@ -13,16 +13,15 @@ class Endereco extends Model
     protected $fillable = [
         'rua',
         'numero',
-        'complemento',
         'bairro',
         'cidade',
         'estado',
         'cep',
-        'pais'
     ];
 
     public function user(){
         return $this -> hasOne(Users::class, 'id_endereco', 'id_endereco');
+
     }
 
 }
