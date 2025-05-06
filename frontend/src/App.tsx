@@ -7,6 +7,8 @@ import { Home } from '@/pages/Home'
 import { AnnouncementPage } from './pages/AnnouncementPage'
 import { SearchProfessional } from './pages/SearchProfessional'
 import { Chat } from './pages/Chat'
+import { Profile } from './pages/Profile'
+import { Favorites } from './pages/Favorites'
 import { ContractingArea } from './pages/ContractingArea'
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/search' element={<SearchProfessional />} />
         <Route path='/chat' element={<Chat />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path='/favorites' element={<Favorites />} />
       </Routes>
     </BrowserRouter>
   )
