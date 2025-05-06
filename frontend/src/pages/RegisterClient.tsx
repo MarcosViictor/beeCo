@@ -1,13 +1,11 @@
 import { Button } from '@/components/Button'
 import { Input } from '@/components/Input'
-
 import { Link } from 'react-router-dom'
-
 import googleIcon from '@/assets/google.svg'
 
 export const RegisterClient = () => {
   return (
-    <div className='flex flex-col justify-center items-center h-screen '>
+    <div className='flex flex-col justify-center items-center h-screen bg-[url("./assets/register-client.jpg")] bg-cover bg-center'>
       <div className='flex gap-30 justify-center items-center w-[800px] '>
         <div className='flex flex-col gap-4 w-[400px]'>
           <h1 className='font-[400] text-[3.7rem] text-dark-gray leading-[2.5rem]'>
