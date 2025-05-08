@@ -2,10 +2,19 @@ import Facebook from "@/assets/facebook.svg"
 import Twitter from "@/assets/twitter.svg"
 import Instagram from "@/assets/instagram.svg"
 import Youtube from '@/assets/youtube.svg'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export const Footer = () => {
+    useEffect(() => {
+      AOS.init({
+        duration: 800, 
+        once: true,
+      })
+    }, [])
     return (
-      <footer id='contato' className='w-full bg-white text-dark-gray py-6'>
+      <footer id='contato' className='w-full bg-white text-dark-gray py-6' data-aos="fade-up">
         <div className='container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
           <div className='flex flex-col gap-4'>
             <div className='flex justify-around text-[.9rem]'>

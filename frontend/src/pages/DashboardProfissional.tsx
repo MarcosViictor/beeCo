@@ -2,7 +2,7 @@ import { GalleryRoulette } from '@/components/GalleryRoullete'
 import { SideMenu } from '@/components/SideMenu'
 import { annoucementData } from '@/mock/DataAnnouncement'
 
-export const AnnouncementPage = () => {
+export const DashboardProfissional = () => {
   return (
     <>
       <SideMenu />
