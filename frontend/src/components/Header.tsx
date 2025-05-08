@@ -1,10 +1,24 @@
 import { Link } from 'react-router-dom'
 import Logo from '@/assets/logo.svg'
 import { Button } from '@/components/Button'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export const Header = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    })
+  }, [])
+
   return (
-    <header id='inicio' className='flex justify-center items-center py-4 bg-off-white'>
+    <header
+      id='inicio'
+      className='flex justify-center items-center py-4 bg-off-white'
+      data-aos="fade-down"
+    >
       <div className='flex gap-23 items-center '>
         <a href='#'>
           <img src={Logo} alt='BeeCo Logo' className='h-19' />
