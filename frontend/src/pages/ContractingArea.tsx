@@ -5,7 +5,6 @@ import Button from '@/components/Button'
 import { ProfessionalCard } from '@/components/ProfessionalCard'
 import { DataProfessionals } from '@/mock/DataProfessionals'
 import { useNavigate } from 'react-router-dom'
-import { Footer } from '@/components/Footer'
 import { ServiceCard } from '@/components/ServiceCard'
 import { services } from '@/mock/DataServiceCards'
 
@@ -132,7 +131,6 @@ export const ContractingArea = () => {
             </div>
           </section>
         </div>
-        <Footer />
       </main>
     </div>
   )

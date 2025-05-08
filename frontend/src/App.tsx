@@ -13,16 +13,13 @@ import { ContractingArea } from './pages/ContractingArea'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/announcement' element={<AnnouncementPage />} />
         <Route path='/contracting' element={<ContractingArea />} />
         <Route path='/select/register' element={<RegisterOptionUser />} />
-        <Route
-          path='/professional/register'
-          element={<RegisterProfessional />}
-        />
+        <Route path='/professional/register' element={<RegisterProfessional />}/>
         <Route path='/register' element={<RegisterClient />} />
         <Route path='/login' element={<Login />} />
         <Route path='/search' element={<SearchProfessional />} />

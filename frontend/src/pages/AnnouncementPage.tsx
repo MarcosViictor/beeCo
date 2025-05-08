@@ -1,4 +1,3 @@
-import { Footer } from '@/components/Footer'
 import { GalleryRoulette } from '@/components/GalleryRoullete'
 import { SideMenu } from '@/components/SideMenu'
 import { annoucementData } from '@/mock/DataAnnouncement'
@@ -75,7 +74,6 @@ export const AnnouncementPage = () => {
           </section>
         </div>
       </div>
-      <Footer />
     </>
   )
 }

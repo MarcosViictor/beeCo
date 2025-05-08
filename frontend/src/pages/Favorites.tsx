@@ -4,7 +4,6 @@ import Button from "@/components/Button"
 import { Search } from "lucide-react"
 import { DataProfessionals } from "@/mock/DataProfessionals"
 import { ProfessionalCard } from "@/components/ProfessionalCard"
-import { Footer } from "@/components/Footer"
 
 export const Favorites = () => {
     return (
@@ -40,7 +39,6 @@ export const Favorites = () => {
                     ))}
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

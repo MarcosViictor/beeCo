@@ -2,7 +2,6 @@ import { Button } from '@/components/Button'
 import { Input } from '@/components/Input'
 import { ProfessionalCard } from '@/components/ProfessionalCard'
 import { SideMenu } from '@/components/SideMenu'
-import { Footer } from '@/components/Footer'
 import { Search, Filter } from 'lucide-react'
 import { DataProfessionals } from '@/mock/DataProfessionals'
 
@@ -35,7 +34,6 @@ export const SearchProfessional = () => {
                     ))}
                 </div>
             </section>
-            <Footer />
         </>
     )
 }
