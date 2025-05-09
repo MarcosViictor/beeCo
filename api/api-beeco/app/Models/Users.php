@@ -89,4 +89,14 @@ class Users extends Authenticatable implements JWTSubject
     {
         return $this->hasOne(Prestador::class, 'id_usuarios', 'id');
     }
+    
+    public function favoritos()
+    {
+        return $this->hasMany(Favoritos::class, 'contratante_id');
+    }
+
+    public function favoritadoPor()
+    {
+        return $this->hasMany(Favoritos::class, 'prestador_id');
+    }
 }

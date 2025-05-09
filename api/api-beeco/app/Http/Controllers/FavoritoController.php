@@ -1,41 +1,62 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use App\Models\Favoritos;
+use App\Models\Users;
 use Illuminate\Http\Request;
 
 class FavoritoController extends Controller
 {
+    // Listar favoritos do contratante logado
     public function index(Request $request)
     {
-        // Retorna os prestadores favoritos do contratante autenticado
-        return Favoritos::where('id_contratante', $request->user()->id)
-            ->with('prestador')
+        if ($request->user()->tipo !== 'contratante') {
+            return response()->json(['error' => 'Apenas contratantes podem listar favoritos.'], 403);
+        }
+
+        $favoritos = Favoritos::where('id_contratante', $request->user()->id)
+            ->with('prestador') // certifique-se que o relacionamento existe no model Favoritos
             ->get();
+
+        return response()->json($favoritos);
     }
 
+    // Adicionar prestador aos favoritos
     public function store(Request $request)
     {
-        // Adiciona um prestador aos favoritos
         $request->validate([
             'id_prestador' => 'required|exists:users,id',
         ]);
 
-        $favorito = Favoritos::create([
+        if ($request->user()->tipo !== 'contratante') {
+            return response()->json(['error' => 'Apenas contratantes podem favoritar.'], 403);
+        }
+
+        $prestador = Users::where('id', $request->id_prestador)
+            ->where('tipo', 'prestador')
+            ->firstOrFail();
+
+        $favorito = Favoritos::firstOrCreate([
             'id_contratante' => $request->user()->id,
-            'id_prestador' => $request->id_prestador,
+            'id_prestador' => $prestador->id,
         ]);
 
         return response()->json($favorito, 201);
     }
 
-    public function destroy(Request $request, $id)
+    // Remover prestador dos favoritos
+    public function destroy(Request $request, $prestador_id)
     {
-        // Remove um prestador dos favoritos
+        if ($request->user()->tipo !== 'contratante') {
+            return response()->json(['error' => 'Apenas contratantes podem remover favoritos.'], 403);
+        }
+
         $favorito = Favoritos::where('id_contratante', $request->user()->id)
-            ->where('id_favorito', $id)
+            ->where('id_prestador', $prestador_id)
             ->firstOrFail();
+
         $favorito->delete();
 
         return response()->json(['message' => 'Favorito removido com sucesso']);

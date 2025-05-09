@@ -67,11 +67,12 @@ Route::middleware('auth:api')->group(function () {
     Route::delete('/enderecos/{id}', [\App\Http\Controllers\EnderecoController::class, 'destroy']);
 //});
 
-Route::middleware(['auth:api'])->group(function () {
+Route::middleware('auth:api')->group(function () {
     Route::get('/favoritos', [\App\Http\Controllers\FavoritoController::class, 'index']);
     Route::post('/favoritos', [\App\Http\Controllers\FavoritoController::class, 'store']);
-    Route::delete('/favoritos/{id}', [\App\Http\Controllers\FavoritoController::class, 'destroy']);
+    Route::delete('/favoritos/{prestador_id}', [\App\Http\Controllers\FavoritoController::class, 'destroy']);
 });
+
 
 
 
