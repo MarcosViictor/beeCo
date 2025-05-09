@@ -17,7 +17,7 @@ class FavoritoController extends Controller
         }
 
         $favoritos = Favoritos::where('id_contratante', $request->user()->id)
-            ->with('prestador') // certifique-se que o relacionamento existe no model Favoritos
+            ->with('prestador') 
             ->get();
 
         return response()->json($favoritos);
